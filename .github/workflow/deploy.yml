@@ -1,0 +1,32 @@
+name: Deploy Hugo Blog
+
+on:
+  push:
+    branches:
+      - main # 当推送到 main 分支时触发部署
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 检出代码
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # 2. 设置 Hugo 环境
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+
+    # 3. 构建 Hugo 网站
+    - name: Build Hugo
+      run: hugo --minify
+
+    # 4. 部署到 GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
