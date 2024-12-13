@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $hero := (cond (ne .Params.title nil) .Params.title .Site.Title) }}
+{{ partial "hero.html" (dict "Title" $hero "Subtitle" .Params.description "Large" true "Context" . ) }}
+
+<!-- 卡片网格布局 -->
+<div class="m-[30px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 bg-red">
+  <!-- 遍历文章 -->
+  {{ range .Site.RegularPages }}
+  <!-- prettier-ignore -->
+  <div class="card bg-{{ index (shuffle (slice "red-200" "green-200" "blue-200" "yellow-200" "purple-200" "pink-200" ))
+    0 }} shadow-md rounded-md overflow-hidden hover:shadow-lg transition-shadow">
+    <a href="{{ .Permalink }}">
+      <div class="card-content p-4">
+        <h2 class="text-lg font-bold text-gray-800">{{ .Title }}</h2>
+        <p class="text-sm text-gray-600">
+          {{ with .Params.description }}
+          {{ . }}
+          {{ else }}
+          {{ .Summary | plainify | truncate 100 }}
+          {{ end }}
+        </p>
+      </div>
+    </a>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}
