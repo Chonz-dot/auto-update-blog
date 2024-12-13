@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# auto-update-blog
-auto update blog
-=======
 ![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/jacksalici/salinger-theme?color=white)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jacksalici/salinger-theme/main?logo=github) ![GitHub Repo stars](https://img.shields.io/github/stars/jacksalici/salinger-theme?style=flat)
@@ -88,4 +84,3 @@ Check out the [__wiki__](https://github.com/jacksalici/salinger-theme/wiki) and 
 ## License 📜
 
 The Salinger theme code is licensed under the [MIT license](https://github.com/jacksalici/salinger-theme/blob/master/LICENSE).
->>>>>>> 19c9494 (init)
