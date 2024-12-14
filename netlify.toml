@@ -1,6 +1,6 @@
 [build]
-command = "cd example-site && hugo --gc -t ../.. "
-publish = "example-site/public"
+command = "hugo --gc --minify"
+publish = "public"
 
 [build.environment]
 HUGO_BASEURL = "https://salinger-hugo-theme.netlify.app"
