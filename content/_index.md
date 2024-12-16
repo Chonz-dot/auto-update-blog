@@ -1,4 +1,4 @@
 ---
-title: "Hi there, this is Salinger theme.Your blog."
-description: "A clean, minimalistic, mobile-first, blazing-fast, powerfull theme for Hugo framework made with Tailwind and DaisyUI. Please consider starring this project on Github."
+title: "Hi there, this is BTX Capital."
+description: "Unlocking the Potential of Cryptocurrencies Assets Liquidity with Us."
 ---

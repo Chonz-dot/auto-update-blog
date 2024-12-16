@@ -3,7 +3,7 @@
 {{ partial "hero.html" (dict "Title" $hero "Subtitle" .Params.description "Large" true "Context" . ) }}
 
 <!-- 卡片网格布局 -->
-<div class="m-[30px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 bg-red">
+<div class="my-[30px] px-[15%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 bg-red">
   <!-- 遍历文章 -->
   {{ range .Site.RegularPages }}
   <!-- prettier-ignore -->
